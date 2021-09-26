@@ -1,11 +1,15 @@
+@import 'styles/fonts';
+@import 'styles/mixins';
+@import 'styles/colors';
+
 .logo {
     padding: 8px 15px;
-    color: #1a1a1a;
+    color: $color-cod-gray;
     font-size: 3.5rem;
-    font-family: 'Righteous';
+    font-family: $font-logo;
     cursor: default;
 
-    @media (max-width: 720px) {
+    @include breakpoint('sm', 'max') {
         font-size: 2.5rem;
         padding: 6px 10px;
         z-index: 100;

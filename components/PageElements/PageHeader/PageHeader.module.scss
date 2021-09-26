@@ -1,4 +1,6 @@
 @import 'styles/colors';
+@import 'styles/animations';
+
 $back-color: #0f0729c7;
 
 .pageHeader {
@@ -25,18 +27,7 @@ $back-color: #0f0729c7;
         font-family: 'Righteous';
         font-size: 4em;
         font-weight: normal;
-        animation: appearTop 2s;
+        animation: appearFromTop 2s;
         z-index: 1;
-    }
-}
-
-@keyframes appearTop {
-    from { 
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
     }
 }

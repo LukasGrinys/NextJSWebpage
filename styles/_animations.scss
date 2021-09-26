@@ -1,0 +1,31 @@
+@keyframes ringPulse {
+    0% {
+        opacity: 0.3;
+        transform: scale(1.1);
+    }
+
+    80% {
+        opacity: 0.3;
+        transform: scale(1.5);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.7);
+    }
+}
+
+@keyframes barSlide {
+    from { transform: translateY(-100%) }
+    to { transform: translateY(0%) }
+}
+
+@keyframes appearFromTop {
+    0% { opacity: 0; transform: translateX(-70%)}
+    100% { opacity: 1; transform: translateX(0%)}
+}
+
+@keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
