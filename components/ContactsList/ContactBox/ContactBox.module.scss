@@ -1,0 +1,30 @@
+.contactBox {
+    display: inline-block;
+    width: 250px;
+    padding: 16px 4px;
+
+    .contactImage {
+        filter: invert(100%);
+    }
+
+    .details {
+        padding-left: 40px;
+        font-size: 1rem;
+        text-align: left;
+
+        p {
+            padding-left: 0;
+            font-size: 1rem;
+        }
+
+        li > div {
+            &:first-child {
+                margin-right: 8px !important;
+            }
+        }
+
+        .icon {
+            filter: invert(100%);
+        }
+    }
+}

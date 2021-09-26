@@ -1,0 +1,93 @@
+@import 'styles/colors';
+$card-title-height: 40px;
+$title-card-color: $color-black-russian;
+
+.planItem {
+    display: inline-block;
+    height: 340px;
+    width: 100%;
+    max-width: 250px;
+    margin: 8px 12px;
+    background: $color-seashell-white;
+    border-radius: 4px;
+    box-shadow: 0px 2px 8px 1px #0f0729c7;
+    position: relative;
+    cursor: default;
+
+    .title {
+        position: relative;
+        height: $card-title-height;
+        margin-bottom: 12px;
+        padding-top: 8px;
+        background: $title-card-color;
+        border-radius: 4px 4px 0 0;
+        color: $color-seashell-white;
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-align: center;
+        z-index: 1;
+
+        &::before {
+            position: absolute;
+            left: 0;
+            top: calc(#{$card-title-height} - 1px);
+            width: 100%;
+            height: calc(#{$card-title-height} / 3);
+            background: $title-card-color;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+            content: '';
+            z-index: 0;
+        }
+    }
+
+    .price {
+        margin-bottom: 12px;
+
+        > span {
+            &:nth-child(1) {
+                font-size: 2rem;
+            }
+    
+            &:nth-child(2) {
+                font-size: 3rem;
+            }
+            
+            &:nth-child(3) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .featureList {
+        padding: 0 16px;
+    
+        .feature {
+            padding: 2px 4px;  
+    
+            &::before {
+                content: '\2713';
+                padding-right: 4px;
+            }
+    
+            &.disabled {
+                opacity: 0.3;
+            }
+        }
+    }
+
+    .btn {
+        margin: 24px auto 0;
+        padding: 8px 16px;
+        background: $color-azure-blue;
+        border-radius: 50px;
+        color: $color-seashell-white;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: 0.2s ease-out;
+
+        &:hover {
+            background: $color-cod-gray;
+            transform: scale(1.02, 1.02);  
+        }
+    }
+}

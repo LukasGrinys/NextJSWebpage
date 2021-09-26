@@ -1,0 +1,71 @@
+@import 'styles/mixins';
+@import 'styles/colors';
+
+$btn-size: 30px;
+$animation-step-duration: 1s;
+
+.navButton {
+    position: absolute;
+    top: 15px;
+    left: 48%;
+    width: $btn-size;
+    height: $btn-size;
+    z-index: 101;
+    cursor: pointer;
+    transition-duration: $animation-step-duration;
+
+    img {
+        width: $btn-size;
+        height: $btn-size;
+    }
+}
+
+.navigation {
+    display: block;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: $color-concrete-white;
+    box-shadow: 2px 2px 4px $color-dove-gray;
+    animation-name: barSlide, appear;
+    animation-duration: $animation-step-duration;
+    z-index: 99;
+
+    ul {
+        li {
+            padding: 15px;
+            border-bottom: 2px solid $color-alabaster-white;
+            text-align: center;
+
+            a {
+                color: #1a1a1a;
+                font-family: "Alata", Arial, Helvetica, sans-serif;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                opacity: 0;
+                animation-name: appear;
+                animation-delay: $animation-step-duration;
+                animation-duration: $animation-step-duration;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+}
+
+@keyframes barSlide {
+    from {transform: translateY(-100%)}
+    to {transform: translateY(0%)}
+}
+
+@keyframes appear {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@include breakpoint('sm') {
+    .navigation,
+    .navButton {
+        display: none;
+    }
+}

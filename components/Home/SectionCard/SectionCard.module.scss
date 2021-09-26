@@ -1,0 +1,116 @@
+@import 'styles/colors';
+@import 'styles/mixins';
+
+.sectionCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 25px 15px;
+    font-family: 'Montserrat';
+    overflow: hidden;
+
+    .sectionInfo {
+        width: 500px;
+        padding: 40px 35px;
+
+        h1 {
+            font-family: 'Alata', Arial, Helvetica, sans-serif;
+            font-size: 4.5rem;
+
+            &.animated {
+                animation: appear 2s;
+            }
+        }
+
+        p {
+            padding: 8px 0;
+            margin-bottom: 12px;
+            font-size: 2rem;
+            font-weight: 300;
+
+            &.animated {
+                opacity: 0;
+                animation-name: fadeIn;
+                animation-duration: 2s;
+                animation-delay: 2s;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        button {
+            position: relative;
+            padding: 10px 35px;
+            border: none;
+            border-radius: 50px;
+            background-color: $color-azure-blue;
+            color: $color-seashell-white;
+            font-weight: 500;
+            font-size: 1.2rem;
+            outline: none;
+            transition: 0.2s ease-out;
+
+            &.animated {
+                opacity: 0;
+                animation-name: fadeIn;
+                animation-duration: 1s;
+                animation-delay: 2s;
+                animation-fill-mode: forwards;
+            }
+
+            &:hover {
+                background-color: $color-black-russian;
+                transform: scale(1.02, 1.02);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .graphicBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+
+        img {
+            position: relative;
+            z-index: 5;
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+            max-height: 400px;
+        }
+    }   
+}
+
+@include breakpoint('sm', 'max') {
+    .sectionCard {
+        .sectionInfo {
+            h1 {
+                font-size: 3rem;
+                text-align: center;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+
+        &:first-of-type {
+            padding-top: 80px;
+        }
+    }
+}
+
+@keyframes appear {
+    0% { opacity: 0; transform: translateX(-70%)}
+    100% { opacity: 1; transform: translateX(0%)}
+}
+
+@keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}

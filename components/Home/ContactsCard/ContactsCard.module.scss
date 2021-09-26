@@ -1,0 +1,16 @@
+.contactInfo {
+    margin-bottom: 20px;
+    padding: 15px;
+
+    li {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+
+        img {
+            width: 1em;
+            height: 1em;
+            margin-right: 8px;
+            filter: invert(100%);
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@import 'styles/mixins';
+@import 'styles/colors';
+
+.contentWrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 24px 8px;
+    background-color: $color-concrete-white;
+
+    section {
+        margin: 12px 0 32px;
+    }
+
+    h2 {
+        margin: 12px 0;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    p {
+        padding: 4px 24px;
+        font-size: 1.2rem;
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    hr {
+        height: 3px;
+        width: 60%;
+        margin: 30px auto;
+        background: $color-butterfly-violet;
+        border-radius: 2px;
+        opacity: 0.3;
+    }
+
+    &.dark {
+        background-color: $color-black-russian;
+        color: $color-concrete-white;
+    }
+}
+
+@include breakpoint('md') {
+    .contentWrapper {
+        h2 {
+            font-size: 2.5rem;
+        }
+    
+        p {
+            font-size: 1.6em;
+        }
+    }
+}

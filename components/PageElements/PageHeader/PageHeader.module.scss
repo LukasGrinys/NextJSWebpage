@@ -1,0 +1,42 @@
+@import 'styles/colors';
+$back-color: #0f0729c7;
+
+.pageHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 480px;
+    width: 100%;
+    background-color: $back-color;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        background: $back-color;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+
+    h1 {
+        position: relative;
+        color: $color-concrete-white;
+        font-family: 'Righteous';
+        font-size: 4em;
+        font-weight: normal;
+        animation: appearTop 2s;
+        z-index: 1;
+    }
+}
+
+@keyframes appearTop {
+    from { 
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
