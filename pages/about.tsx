@@ -5,12 +5,14 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import PageHeader from 'components/PageElements/PageHeader';
 import ContentWrapper from 'components/PageElements/ContentWrapper';
 import contentImage from 'public/media/home/home1.svg';
+import Title from 'components/PageElements/Title';
 
 import { IMAGES } from 'constants/images';
 
 const About = () => {
     return (
         <main>
+            <Title subtitle={'About'}/>
             <PageHeader
                 title={"About"}
                 imgSrc={IMAGES.headers.about}

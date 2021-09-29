@@ -3,12 +3,14 @@ import React from 'react';
 import PageHeader from 'components/PageElements/PageHeader';
 import ContentWrapper from 'components/PageElements/ContentWrapper';
 import Plans from 'components/Plans';
+import Title from 'components/PageElements/Title';
 
 const headerImg = '/media/headers/service.jpg';
 
 const Service = () => {
     return (
         <main>
+            <Title subtitle={'Service'}/>
             <PageHeader
                 title={'Service'}
                 imgSrc={headerImg}

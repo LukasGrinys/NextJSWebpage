@@ -1,3 +1,4 @@
 export const SETTINGS = {
-    showScrollToTopOffset: 200
+    showScrollToTopOffset: 200,
+    pageTitle: "Webpage"
 }

@@ -1,15 +1,17 @@
 import Image from "next/image";
 
-import Cloud from "../components/Home/Cloud";
-import SectionCard from "../components/Home/SectionCard";
-import { ColorScheme } from "../components/Home/SectionCard/SectionCard";
-import PartnersCard from "../components/Home/PartnersCard";
-import ContactsCard from "../components/Home/ContactsCard";
+import Cloud from "components/Home/Cloud";
+import SectionCard from "components/Home/SectionCard";
+import { ColorScheme } from "components/Home/SectionCard/SectionCard";
+import PartnersCard from "components/Home/PartnersCard";
+import ContactsCard from "components/Home/ContactsCard";
+import Title from "components/PageElements/Title";
 import { IMAGES } from "constants/images";
 
 const Homepage = () => {
-    return (
+    return (            
         <main>
+            <Title subtitle={'Home'}/>
             <Cloud/>
             <SectionCard
                 colorScheme={ColorScheme.purple}
@@ -26,6 +28,7 @@ const Homepage = () => {
                     width={400}
                     height={400}
                     alt={"Home"}
+                    loading={'eager'}
                 />
             </SectionCard>
             <SectionCard
