@@ -13,15 +13,26 @@
     background: url('./cloud.png');
     opacity: 0.3;
     animation-name: float;
-    animation-duration: 25s;
+    animation-duration: 15s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
+    animation-direction: forwards;
     z-index: 4;
 }
 
-// TODO: replace with translate
 @keyframes float {
-    0% { margin-left: -50%; }
-    100% { margin-left: 100%; }
+    0% { 
+        opacity: 0;
+        transform: translateX(-50%); 
+    }
+    5% {
+        opacity: 0.3;
+    }
+    95% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0; 
+        transform: translateX(100%); 
+    }
 }
