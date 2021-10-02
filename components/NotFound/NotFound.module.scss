@@ -1,0 +1,40 @@
+@import 'styles/mixins';
+@import 'styles/colors';
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: calc(100vh - 247px);
+    margin-top: 65px;
+    background: $color-concrete-white;
+
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 12px;
+        padding: 4px 20px;
+
+        > div:first-child {
+            padding: 4px 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        > div:last-child {
+            padding: 8px 0;
+            color: $color-cod-gray;
+            font-size: 1rem;
+        }
+    }
+}
+
+@include breakpoint('sm') {
+    .container {
+        min-height: calc(100vh - 272px);
+        margin-top: 0;
+    }
+}
