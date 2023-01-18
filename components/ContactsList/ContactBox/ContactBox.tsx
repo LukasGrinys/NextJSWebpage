@@ -41,6 +41,7 @@ const ContactBox:FunctionComponent<IContactBoxProps> = ({
                             width={iconSize} 
                             src={ICONS.phone} 
                             className={styles.icon}
+                            alt="phone"
                         />
                         {phone}
                     </li>
@@ -50,6 +51,7 @@ const ContactBox:FunctionComponent<IContactBoxProps> = ({
                             width={iconSize} 
                             src={ICONS.mail} 
                             className={styles.icon}
+                            alt="mail"
                         />
                         {mail}
                     </li>
