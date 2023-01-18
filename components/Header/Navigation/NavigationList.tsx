@@ -14,16 +14,6 @@ const NavigationList = () => (
             </Link>
         </li>
         <li>
-            <Link href='/service'>
-                Service
-            </Link>
-        </li>
-        <li>
-            <Link href='/partners'>
-                Partners
-            </Link>
-        </li>
-        <li>
             <Link href='/contact'>
                 Contact
             </Link>

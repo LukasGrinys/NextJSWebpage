@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import ScrollAnimation from 'react-animate-on-scroll';
 
 import PageHeader from 'components/PageElements/PageHeader';
 import ContentWrapper from 'components/PageElements/ContentWrapper';
@@ -26,14 +25,12 @@ const About = () => {
                         interdum.
                     </p>
                     <div style={{textAlign: "center"}}>
-                        <ScrollAnimation animateIn={"fadeInLeft"} animateOnce={true}>
-                            <Image 
-                                src={contentImage} 
-                                alt="About"
-                                height={320}
-                                width={320}
-                            />
-                        </ScrollAnimation>
+                        <Image 
+                            src={contentImage} 
+                            alt="About"
+                            height={320}
+                            width={320}
+                        />
                     </div>
                     <p>
                         Vivamus vitae magna tortor. Quisque porta dolor sed quam 

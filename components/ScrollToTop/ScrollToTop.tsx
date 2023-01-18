@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from 'react';
 import { throttle } from 'throttle-debounce';
 
@@ -25,7 +27,6 @@ const ScrollToTop = () => {
         }
     }, []);
 
-    
     const handleClick = () => {
         window.scrollTo(0,0);
     }

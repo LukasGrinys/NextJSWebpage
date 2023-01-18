@@ -19,6 +19,11 @@ $animation-step-duration: 1s;
         width: $btn-size;
         height: $btn-size;
     }
+
+    &.isOpen {
+        opacity: 0.9;
+        transform: rotateZ(180deg)
+    }
 }
 
 .navigation {
