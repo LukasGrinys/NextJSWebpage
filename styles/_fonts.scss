@@ -1,3 +1,3 @@
-$font-main: 'Montserrat', Arial, Helvetica, sans-serif;
-$font-alt: 'Alata', Arial, Helvetica, sans-serif;
-$font-logo: 'Righteous';
+$font-main: var(--font-montserrat), Arial, Helvetica, sans-serif;
+$font-alt: var(--font-alata), Arial, Helvetica, sans-serif;
+$font-logo: var(--font-righteus);
